@@ -17,5 +17,6 @@ if($radius < 0)
 }
 else
 {
+   # The '.' (dot) operator can be used for string concatenation.
    print "Circumference is " . 2 * 3.14 * $radius . "\n";
 }
