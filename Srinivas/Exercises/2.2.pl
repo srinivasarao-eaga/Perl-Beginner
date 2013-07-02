@@ -2,12 +2,12 @@
 
 # Printing names in the given order
 
-# Normally we assign lists to arrays. Meaning a group of scarlars for a 'list', which is assigned to 
+# Normally we assign lists to arrays. Meaning a group of scalars form a 'list', which is assigned to 
 # an array. To save effort, Perl offers a variety of list constructs
 # ("one", "two", "three", "four") is a valid list. Also you can use the 'qw' operator, which stands for
 # 'quoted words'. qw/one two three/, qw{one two three}, qw[one two three] are all valid lists
 
-my @names = qw /one two three four five/ ;
+my @names = qw / one two three four five/ ;
 
 my @indexes;
 
@@ -22,5 +22,5 @@ foreach $index (@indexes)
   # When you are accessing one of the values in array, you will have to use '$' as one value is a scalar
   # Just the difference between 'Apples' and 'Apple'
   
-  print $names[$index];
+  print $names[$index] . "/n";
 }
