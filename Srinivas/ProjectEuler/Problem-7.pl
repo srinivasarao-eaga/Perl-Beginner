@@ -37,7 +37,7 @@ while( $primeCounter < $desiredPrime)
     }
   }   
   
-  # By stepping 2 at a time (and starting from an even number '5') we are just not checking 'even' numbers
+  # By stepping 2 at a time (and starting from an odd number '5') we are skipping 'even' numbers
   # This reduces the running time by a good margin
   
   $runningCounter += 2;
