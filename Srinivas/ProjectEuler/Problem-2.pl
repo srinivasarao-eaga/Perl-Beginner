@@ -34,6 +34,9 @@ sub Approach2
   while ($n < $last)
   {
     $sum = $sum + $n;
+    
+  # The below in-place swap moves the numbers one step ahead in the even sequence
+  # Eg. Say, m, n are 2, 8. After this operation, m,n will be 8, 34 (4*8 +2)
     ($m, $n) = ($n, (4 * $n) + $m);
   }
   $sum;
