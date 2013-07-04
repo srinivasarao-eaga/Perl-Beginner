@@ -37,6 +37,8 @@ sub multiples
  # Eg. Multiples of 3 are 3, 6, 9, 12 ... 999 (i.e < 1000)
  # So, the sum of 3 multiples is basically 3 * (1 + 2 + 3 .... + 333)
  
+ # Arguments for this function are passed internally through an array named '@_'
+ # So $_[0] has the first argument, $_[1] has the second argument and so on
  my $k = $_[0];
  
  #The below 'int' conversion is important. We want integer computation here
