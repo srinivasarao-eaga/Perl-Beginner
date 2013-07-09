@@ -3,7 +3,7 @@
 my @numbers = <STDIN>;
 chomp(@numbers);
 
-// &sum(@numbers) is the function call
+# &sum(@numbers) is the function call
 print "The sum of @numbers is - " . &sum(@numbers);
 
 # This is a sub routine. The arguments are passed in an 
