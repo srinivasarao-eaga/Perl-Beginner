@@ -1,9 +1,15 @@
 #!/usr/bin/perl
 
 my @numbers = (20, 22, 1..10);
+my @nosAboveAvg = &aboveAverage(@numbers);
 
-print "The numbers above average are - ";
-print &aboveAverage(@numbers);
+# The global '$"' variable is the delimiter value used by various 
+# functions and operators. Array interpolation in strings is one example
+# Here we override the default value (space) to have a comma
+
+$" = ' , ';   
+print "The numbers above average are - @nosAboveAvg";
+$" = ' ';
 
 
 sub aboveAverage
@@ -15,8 +21,9 @@ sub aboveAverage
   {
     if($_ > $average) 
     {
-      push @result, $_ ;  # push adds an element to the end of an array, pop does the reverse
-                     
+      # push adds an element to the end of an array, pop does the reverse
+      # shift and unshift do the same from the start of the array
+      push @result, $_ ;  
     }
   }
   @result;
