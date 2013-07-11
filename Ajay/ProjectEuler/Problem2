@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+print "its fibonacci even series\n";
+
+$f1=1;
+#print "$f1\n";
+$f2="2\n";
+#print $f2;
+while($f3<4000000)
+{
+$f3=$f1+$f2;
+if($f3%2==0&&$f3<4000000)
+{
+print "$f3\n";
+}
+$f1=$f2;
+$f2=$f3;
+}
+
+
+
