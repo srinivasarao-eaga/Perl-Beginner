@@ -3,6 +3,16 @@
 my @numbers = (2,3);
 my $sum = 0;
 
+# This is a different and optimised approach compared to Problem-10-v1.pl
+# Here we compute the sum in two steps
+# Step 1:  find out the primes below 100000 (a small percentage of actual target) using 
+#          'Sieve of Eratosthenes' method. Here we take all the numbers from 2 to N, and 
+#           start dividing all the numbers with the lowest number, and then with next lowest
+#           number and so on
+
+# This is another optimisation to the 'Sieve' method. With the below step we operate the
+# Sieve method only on 33% of the population ( removing all the 2 and 3 divisors)
+
 foreach (5..100000)
 {
   if($_ % 2 != 0 && $_ % 3 != 0)
@@ -30,6 +40,9 @@ for(my $i = 0; $i < sqrt(100000); $i++)
     }
   }
 }
+
+# Now all the non zero numbers in @numbers are primes, because they
+# are not divided by any of the smallest numbers
 
 foreach (@numbers)
 {
