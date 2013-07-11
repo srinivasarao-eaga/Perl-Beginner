@@ -42,7 +42,7 @@ for(my $i = 0; $i < sqrt(100000); $i++)
 }
 
 # Now all the non zero numbers in @numbers are primes, because they
-# are not divided by any of the smallest numbers
+# are not divisible by any of the smaller ones
 
 foreach (@numbers)
 {
@@ -53,6 +53,14 @@ foreach (@numbers)
     
   } 
 }
+
+# After finding the primes till 100000, we can find the primes between
+# 100001 to 2000000 by 'trial division' method
+# This is same as version1 of this problem, except for one important optimisation
+# instead of dividing a number N with all the numbers between 2 to sqrt(N) (for primality
+# check), we divide with only primes below sqrt(N).  Obviously the outer iteration is 
+# only on odd numbers between 2 to N, with an additional check with 3 divisibility to 
+# skip another 16% numbers 
 
 my $primeLimit = 2000000;
 
